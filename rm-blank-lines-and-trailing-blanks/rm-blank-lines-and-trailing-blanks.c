@@ -17,7 +17,6 @@ int main()
 			rm_trailing_blanks(line, len);
 			printf("%s", line);
 		}
-		printf("AMA READY!");
 	}
 	return 0;
 }
