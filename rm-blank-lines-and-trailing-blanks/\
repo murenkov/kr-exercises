@@ -12,13 +12,11 @@ int main()
 	int len;
 	char line[MAXLINE];
 	
-	while ((len = my_getline(line, MAXLINE)) > 0) {
+	while ((len = my_getline(line, MAXLINE)) > 0) 
 		if (len > 2) {
-			rm_trailing_blanks(line, len);
+			rm_trailing_blaks(line, len);
 			printf("%s", line);
 		}
-		printf("AMA READY!");
-	}
 	return 0;
 }
 
