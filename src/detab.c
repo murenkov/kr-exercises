@@ -34,14 +34,14 @@ int my_getline(char line[], int lim)
 	return i;
 }
 
-/* shift: shift chars in line by num */
+/* shift: shift chars in line by shift */
 int rshift(char line[], int len, int pos, int shift)
 {
 	if (shift < 0 || len+shift > MAXLINE)
 		return -1;
 	for (int i = len; i >= pos; --i)
 		line[i+shift] = line[i];
-	return len + 3;
+	return len + shift;
 }
 
 /* detab: replace tabs with spaces in line */
