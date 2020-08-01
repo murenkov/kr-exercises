@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 #define MAXLINE 1000
+#define SHIFTWIDTH 4
 
 int
 my_getline(char line[], int lim);
@@ -12,13 +13,27 @@ rshift(char line[], int len, int pos, int shift);
 
 /* Get lines and return lines with tabs replaced by spaces. */
 int
-main()
+main(int argc, char **argv)
 {
     int len;
     char line[MAXLINE];
+    int shiftwidth;
 
-    while ((len = my_getline(line, MAXLINE)) > 0) {
-        detab(line, len, 4);
+    switch (argc) {
+        case 1:
+            shiftwidth = SHIFTWIDTH;
+            break;
+        case 2:
+            // TODO: Add multidigit tabwidths.
+            shiftwidth = *argv[1] - '0';
+            break;
+        default:
+            printf("Invalid commandline arguments.\n");
+            return -1;
+    }
+
+    while ((len = my_getline(line, MAXLINE)) > 1) {
+        detab(line, len, shiftwidth);
         printf("%s", line);
     }
 }
