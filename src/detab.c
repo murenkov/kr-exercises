@@ -25,7 +25,8 @@ main(int argc, char **argv)
             break;
         case 2:
             // TODO: Add multidigit tabwidths.
-            shiftwidth = *argv[1] - '0';
+            for (int i = 0, len = strlen(argv[1]); i < len; ++i)
+                shiftwidth = 10 * shiftwidth + argv[1][i] - '0';
             break;
         default:
             printf("Invalid commandline arguments.\n");
@@ -36,6 +37,8 @@ main(int argc, char **argv)
         detab(line, len, shiftwidth);
         printf("%s", line);
     }
+    
+    return 0;
 }
 
 /* my_getline: get line and put into line, return length */
