@@ -1,5 +1,6 @@
 /* Exercise 1-20 from K%R's cpl book. */
 #include <stdio.h>
+#include <string.h>
 
 #define MAXLINE 1000
 #define SHIFTWIDTH 4
@@ -17,14 +18,13 @@ main(int argc, char **argv)
 {
     int len;
     char line[MAXLINE];
-    int shiftwidth;
+    int shiftwidth = 0;
 
     switch (argc) {
         case 1:
             shiftwidth = SHIFTWIDTH;
             break;
         case 2:
-            // TODO: Add multidigit tabwidths.
             for (int i = 0, len = strlen(argv[1]); i < len; ++i)
                 shiftwidth = 10 * shiftwidth + argv[1][i] - '0';
             break;
