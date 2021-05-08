@@ -12,3 +12,11 @@ My solves of exercises from K&R "C Programming Language".
 [Exrcise 1-21](/src/entab.c)
 
 [Exrcise 1-22](/src/fold-line.c)
+
+[Exrcise 1-24](/src/fold-line.c)
+
+TODO:
+* mixed order
+* quotes (both single and double)
+* escape sequences
+* comments
