@@ -1,5 +1,5 @@
 # kr-exercises
-My solves of exercises from K&amp;R "C Programming Language".
+My solves of exercises from K&R "C Programming Language".
 
 [Exrcise 1-17](/src/longer-than-80.c)
 
