@@ -13,6 +13,12 @@ My solves of exercises from K&R "C Programming Language".
 
 ## [Exrcise 1-22](/src/fold-line.c)
 
+## [Exrcise 1-23](/src/remove-comments.c)
+
+TODO:
+* add multiline comments
+* escape quotes
+
 ## [Exrcise 1-24](/src/check-brackets-balance.c)
 
 TODO:
